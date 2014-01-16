@@ -1,0 +1,25 @@
+# Makefile for directory containing LaTeX files based on exam.cls
+# Rename file to just Makefile
+
+SRCS =$(wildcard *.tex)
+PDFS = $(SRCS:.tex=.pdf)
+
+.PHONY: all pdf handout clean
+
+all: $(PDFS)
+
+# The pdf target is for the LaTeX-Suite compilation shortcut
+pdf: $(PDFS)
+
+ans:
+	$(MAKE) ans=1
+
+%.pdf: %.tex
+ifneq ($(ans),1)
+	pdflatex $<
+else
+	pdflatex '\PassOptionsToClass{answers}{exam} \input{$<}'
+endif
+
+clean:
+	rm *.pdf *.aux *.log *.out *.snm *.nav *.toc
