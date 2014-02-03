@@ -23,3 +23,6 @@
 (eval-after-load "haskell-mode"
     '(define-key haskell-mode-map (kbd "C-c C-c") 'haskell-compile))
 
+;; Ido Mode
+(require 'ido)
+(ido-mode t)
