@@ -1,0 +1,23 @@
+execute pathogen#infect()
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set ai
+set hls
+set background=dark
+if has("gui_running")
+     colorscheme solarized
+else
+     colorscheme desert
+endif
+set smartindent
+set exrc 
+
+" LaTeX-Suite configuration
+filetype plugin on
+set grepprg=grep\ -nH\ $*
+filetype indent on
+
+let g:tex_flavor='latex'
+let g:Tex_DefaultTargetFormat='pdf'
+let g:Tex_ViewRule_pdf='evince'
