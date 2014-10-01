@@ -1,4 +1,6 @@
 execute pathogen#infect()
+syntax enable
+set relativenumber
 set tabstop=2
 set shiftwidth=2
 set expandtab
@@ -7,6 +9,11 @@ set hls
 set background=dark
 if has("gui_running")
      colorscheme solarized
+     set guioptions=-m
+     set guioptions=-T
+     set guioptions=-t
+     set guioptions=-r
+     set guioptions=-L
 else
      colorscheme desert
 endif
@@ -21,3 +28,6 @@ filetype indent on
 let g:tex_flavor='latex'
 let g:Tex_DefaultTargetFormat='pdf'
 let g:Tex_ViewRule_pdf='evince'
+
+set runtimepath=~/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,~/.vim/after
+
