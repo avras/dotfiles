@@ -1,19 +1,27 @@
+execute pathogen#infect()
 syntax enable
 set relativenumber
+set number
 set tabstop=2
 set shiftwidth=2
 set expandtab
 set ai
 set hls
+set nofoldenable
+set background=dark
 if has("gui_running")
+     colorscheme solarized
      set guioptions=-m
      set guioptions=-T
      set guioptions=-t
      set guioptions=-r
      set guioptions=-L
+else
+     colorscheme desert
 endif
 set smartindent
 set exrc 
+set foldlevel=99
 
 " LaTeX-Suite configuration
 filetype plugin on
@@ -25,10 +33,8 @@ let g:Tex_DefaultTargetFormat='pdf'
 let g:Tex_ViewRule_pdf='zathura'
 
 set runtimepath=~/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,~/.vim/after
+set runtimepath^=~/.vim/bundle/ctrlp.vim
 
-" Vundle stuff
-set nocompatible              " be iMproved, required
-filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -55,6 +61,7 @@ filetype plugin indent on    " required
 
 colorscheme default
 map <C-n> :NERDTreeToggle<CR>
+let NERDTreeIgnore = ['\.o$']
 set nofoldenable
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 if has("gui_running")
