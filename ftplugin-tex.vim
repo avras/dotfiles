@@ -9,3 +9,13 @@ call vimtex#imaps#add_map({
       \   {'envs' : ['description'], 'rhs' : '\item['},
       \ ],
       \})
+
+call vimtex#imaps#add_map({
+      \ 'lhs' : '<m-p>',
+      \ 'rhs' : '\pause ',
+      \ 'leader'  : '',
+      \ 'wrapper' : 'vimtex#imaps#wrap_environment',
+      \ 'context' : [
+      \   'frame',
+      \ ],
+      \})

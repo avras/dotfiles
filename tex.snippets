@@ -61,13 +61,13 @@ snippet fig "Figure environment" b
 \end{figure}
 endsnippet
 
-snippet enum "Enumerate" bA
+snippet enum "Enumerate" b
 \begin{enumerate}
   \item $0
 \end{enumerate}
 endsnippet
 
-snippet item "Itemize" bA
+snippet item "Itemize" b
 \begin{itemize}
   \item $0
 \end{itemize}
@@ -77,6 +77,16 @@ snippet desc "Description" b
 \begin{description}
   \item[$1] $0
 \end{description}
+endsnippet
+
+snippet frame "Beamer Frame" b
+%% Frame %%
+\begin{frame}{$1}
+  \begin{itemize}
+    \item $0
+  \end{itemize}
+\end{frame}
+
 endsnippet
 
 snippet pac "Package" b
@@ -108,7 +118,7 @@ endsnippet
 snippet ali "Align" bA
 \begin{align*}
   ${1:${VISUAL}}
-.\end{align*}
+\end{align*}
 endsnippet
 
 context "math()"
@@ -189,27 +199,27 @@ snippet () "left( right)" iA
 endsnippet
 
 snippet lr "left( right)" i
-\left( ${1:${VISUAL}} \right) $0
+\left( ${1:${VISUAL}} \right)$0
 endsnippet
 
 snippet lr( "left( right)" i
-\left( ${1:${VISUAL}} \right) $0
+\left( ${1:${VISUAL}} \right)$0
 endsnippet
 
 snippet lr| "left| right|" i
-\left| ${1:${VISUAL}} \right| $0
+\left| ${1:${VISUAL}} \right|$0
 endsnippet
 
 snippet lr{ "left\{ right\}" i
-\left\\{ ${1:${VISUAL}} \right\\} $0
+\left\\{ ${1:${VISUAL}} \right\\}$0
 endsnippet
 
 snippet lrb "left\{ right\}" i
-\left\\{ ${1:${VISUAL}} \right\\} $0
+\left\\{ ${1:${VISUAL}} \right\\}$0
 endsnippet
 
 snippet lr[ "left[ right]" i
-\left[ ${1:${VISUAL}} \right] $0
+\left[ ${1:${VISUAL}} \right]$0
 endsnippet
 
 snippet lra "leftangle rightangle" iA
@@ -221,7 +231,7 @@ snippet 'z "zeta" wA
 endsnippet
 
 snippet sum "sum" w
-\sum_{n=${1:1}}^{${2:\infty}} ${3:a_n z^n}
+\sum_{$1}^{$2} $0
 endsnippet
 
 snippet lim "limit" w
@@ -243,7 +253,7 @@ endsnippet
 
 context "math()"
 snippet ^^ "to the ... power" iA
-^{($1)}$0
+^{$1}$0
 endsnippet
 
 snippet __ "subscript" iA
