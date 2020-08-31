@@ -103,7 +103,7 @@ endsnippet
 
 context "math()"
 snippet iff "iff" Ai
-\iff
+\iff $0
 endsnippet
 
 snippet $$ "Math" wA
@@ -210,6 +210,10 @@ snippet lr| "left| right|" i
 \left| ${1:${VISUAL}} \right|$0
 endsnippet
 
+snippet lrd| "\| \|" i
+\| ${1:${VISUAL}} \|$0
+endsnippet
+
 snippet lr{ "left\{ right\}" i
 \left\\{ ${1:${VISUAL}} \right\\}$0
 endsnippet
@@ -230,8 +234,14 @@ snippet 'z "zeta" wA
 \zeta
 endsnippet
 
+context "math()"
 snippet sum "sum" w
 \sum_{$1}^{$2}$0
+endsnippet
+
+context "math()"
+snippet int "int" w
+\int_{$1}^{$2} $0
 endsnippet
 
 snippet lim "limit" w
@@ -316,6 +326,11 @@ endsnippet
 context "math()"
 snippet xx "cross" iA
 \times 
+endsnippet
+
+context "math()"
+snippet the "theta" iA
+\theta 
 endsnippet
 
 priority 100
@@ -422,6 +437,11 @@ endsnippet
 context "math()"
 snippet tt "text" iA
 \text{$1}$0
+endsnippet
+
+context "math()"
+snippet bf "mathbf" iA
+\mathbf{$1}$0
 endsnippet
 
 context "math()"
