@@ -17,6 +17,12 @@ def math():
     return False
 endglobal
 
+global !p
+def fix_indent(snip):
+    vim.eval('feedkeys("\<c-f>")')
+endglobal
+
+
 snippet template "Basic template" b
 \documentclass[a4paper, 12pt]{article}
 \usepackage[margin=0.5in]{geometry}
@@ -77,6 +83,11 @@ snippet desc "Description" b
 \begin{description}
   \item[$1] $0
 \end{description}
+endsnippet
+
+post_expand "fix_indent(snip)"
+snippet it "Individual item" b
+\item $0
 endsnippet
 
 snippet frame "Beamer Frame" b
@@ -365,10 +376,6 @@ endsnippet
 
 snippet << "<<" iA
 \ll
-endsnippet
-
-snippet DD "delta" iA
-\Delta 
 endsnippet
 
 context "math()"
