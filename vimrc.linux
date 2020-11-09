@@ -7,7 +7,6 @@ set expandtab
 set ai
 set hls
 set nofoldenable
-set background=dark
 if has("gui_running")
      set guioptions=-m
      set guioptions=-T
@@ -58,7 +57,8 @@ map <C-n> :NERDTreeToggle<CR>
 let NERDTreeIgnore = ['\.o$']
 set nofoldenable
 if has("gui_running")
-     colorscheme solarized8_dark
+     colorscheme solarized8
+     set background=dark
 endif
 
 let g:tagbar_type_go = {
