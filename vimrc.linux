@@ -8,11 +8,11 @@ set ai
 set hls
 set nofoldenable
 if has("gui_running")
-     set guioptions=-m
-     set guioptions=-T
-     set guioptions=-t
-     set guioptions=-r
-     set guioptions=-L
+     set guioptions-=m
+     set guioptions-=T
+     set guioptions-=t
+     set guioptions-=r
+     set guioptions-=L
 else
      colorscheme desert
 endif
@@ -47,6 +47,7 @@ Plugin 'ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'sirver/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin '907th/vim-auto-save'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
